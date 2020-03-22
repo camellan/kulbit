@@ -396,12 +396,6 @@ void MainWindow::on_detectBtn_pressed()
     startVideoView();
 }
 
-void MainWindow::on_helpBtn_pressed()
-{
-    //    QMessageBox::aboutQt(this, "Title About Qt");
-    QMessageBox::about(this, tr("About"), tr("Hardware-software complex\nKULBIT"));
-}
-
 void MainWindow::startDetect()
 {
     out.clear();
@@ -713,4 +707,10 @@ void MainWindow::updateModelList()
         ui->zoneView->addItem(newItem);
     }
     qDebug()<<"End update model list";
+}
+
+void MainWindow::on_helpBtn_clicked()
+{
+    QMessageBox::about(0, tr("About"), tr("Hardware-software complex KULBIT\n"
+                                          "Source code: %1").arg(QString("https://github.com/camellan/kulbit")));
 }

@@ -80,10 +80,10 @@ private slots:
     void on_deleteZoneBtn_pressed();
     void on_detectBtn_pressed();
     void on_close_zoneBtn_pressed();
-    void on_helpBtn_pressed();
     void on_addModelBtn_pressed();
     void on_deleteModelBtn_pressed();
     void on_saveModelBtn_pressed();
     void on_canModelBtn_clicked();
+    void on_helpBtn_clicked();
 };
 #endif // MAINWINDOW_H
