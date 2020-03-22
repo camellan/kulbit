@@ -283,7 +283,7 @@ Please select a zone to delete.</source>
 Пожалуйста, выберите зону для удаления.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="714"/>
+        <location filename="mainwindow.cpp" line="717"/>
         <source>About</source>
         <translation>О программе</translation>
     </message>
@@ -353,7 +353,17 @@ Please select a complectation to delete.</source>
 Пожалуйста, выберите комплектацию для удаления.</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="714"/>
+        <location filename="mainwindow.cpp" line="652"/>
+        <source>Save complectation</source>
+        <translation>Сохранение комплектации</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="652"/>
+        <source>Enter complectation number</source>
+        <translation>Введите номер комплектации</translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="717"/>
         <source>Hardware-software complex KULBIT
 Source code: %1</source>
         <translation>Аппаратно-программный комплекс &quot;КУЛЬБИТ&quot;

@@ -647,6 +647,12 @@ void MainWindow::on_saveModelBtn_pressed()
     qRegisterMetaTypeStreamOperators<QList<int> >("QList<int>");
     QList<int> modelmask;
     modelmask.clear();
+    if (ui->modellineEdit->text().size() <= 0)
+    {
+        QMessageBox::warning(this, tr("Save complectation"), tr("Enter complectation number"));
+        ui->modellineEdit->setFocus();
+        return;
+    }
     QLayoutItem *child;
     while ((child = ui->verticalLayout_3->takeAt(0)) != 0)
     {
@@ -666,10 +672,7 @@ void MainWindow::on_saveModelBtn_pressed()
         }
         delete modelButton;
     }
-//    qDebug()<< modelmask;
     modelsettings.setValue(ui->modellineEdit->text(), QVariant::fromValue(modelmask));
-    //    QList<int> myList2 = modelsettings.value("123").value<QList<int> >();
-    //    qDebug() << myList2;
     ui->add_modelFrame->hide();
     updateModelList();
 }
