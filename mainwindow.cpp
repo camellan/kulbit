@@ -152,6 +152,7 @@ void MainWindow::startVideoView()
                     camView_0->ui->graphicsView->fitInView(&camView_0->pixmap, Qt::KeepAspectRatio);
                 }
             }
+            qApp->processEvents();
         }
 
         if (camView_1)
@@ -172,6 +173,7 @@ void MainWindow::startVideoView()
                     camView_1->ui->graphicsView->fitInView(&camView_1->pixmap, Qt::KeepAspectRatio);
                 }
             }
+            qApp->processEvents();
         }
 
         if (camView_2)
@@ -192,8 +194,9 @@ void MainWindow::startVideoView()
                     camView_2->ui->graphicsView->fitInView(&camView_2->pixmap, Qt::KeepAspectRatio);
                 }
             }
+            qApp->processEvents();
         }
-        qApp->processEvents();
+//        qApp->processEvents();
     }
 }
 
@@ -282,9 +285,10 @@ void MainWindow::on_open_zoneBtn_pressed()
             ui->zone_Y->setText(QString::number(zone.y));
             ui->zone_Width->setText(QString::number(zone.width));
             ui->zone_Height->setText(QString::number(zone.height));
-            destroyAllWindows();
+//            destroyAllWindows();
         }
     }
+    destroyWindow("Select detection zone");
     findCircles(a, b, c, d);
 }
 
